@@ -1,0 +1,78 @@
+\documentclass{lni}
+
+\IfFileExists{latin1.sty}{\usepackage{latin1}}{\usepackage{isolatin1}}
+% german-umlaute
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings} %if lstlistings is used
+\usepackage{changepage} %for changing topmargin on first page
+\usepackage[figurename=Abb., tablename=Tab., small]{caption}[2015/04/20]
+\renewcommand{\lstlistingname}{List.}    % Listingname heit nun List. 
+
+%Beginn der Seitenzhlung fr diesen Beitrag
+\setcounter{page}{11}
+
+%Kopfzeileneinstellungen
+\pagestyle{fancy}
+\fancyhead{} % Lscht alle Kopfzeileneinstellungen
+\fancyhead[RO]{\small $<$Vorname Nachname [et. al.]$>$(Hrsg.): $<$Buchtitel$>$, \linebreak Lecture Notes in Informatics (LNI), Gesellschaft fr Informatik, Bonn $<$Jahr$>$ \hspace{5pt} \thepage \hspace{0.05cm}}
+\fancyfoot{} % Lscht alle Fuzeileneinstellungen
+\renewcommand{\headrulewidth}{0.4pt} %Linie unter Kopfzeile 
+\setcounter{footnote}{0}
+
+\author{Vorname1 Nachname1\footnote{Einrichtung/Universitt, Abteilung, Anschrift, Postleitzahl Ort, emailadresse@author1} \, Vorname2 Nachname2\footnote{Einrichtung/Universitt, Abteilung, Anschrift, Postleitzahl Ort, emailadresse@author2} \ und weitere Autorinnen und Autoren in der gleichen Notation}
+\title{Der Titel des Beitrags, der auch etwas länger sein und über zwei Zeilen reichen kann}
+\begin{document}
+
+\maketitle
+%berschrift des Literaturverzeichnisses - delete this line in english
+\renewcommand{\refname}{Literaturverzeichnis}
+\setcounter{footnote}{2} %Auf Anzahl der AutorInnen setzen, damit die weitere Nummerierung der Funoten passt
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+\begin{keywords}
+LNI Guidelines, \LaTeX Vorlage. Die Formatierung erfolgt automatisch innerhalb des keywords-Bereichs.
+\end{keywords}
+
+\section{Einleitung}
+\input{introduction}
+
+%Kopfzeileneinstellungen ab Seite 2
+\pagestyle{fancy}
+\fancyhead{} % Lscht alle Kopfzeileneinstellungen
+\fancyhead[RO]{\small Der Kurztitel des Beitrags \hspace{5pt} \thepage \hspace{0.05cm}}
+\fancyhead[LE]{\hspace{0.05cm}\small \thepage \hspace{5pt} Vorname1 Nachname1 und Vorname2 Nachname2}
+\fancyfoot{} % Lscht alle Fuzeileneinstellungen
+\renewcommand{\headrulewidth}{0.4pt} %Linie unter Kopfzeile 
+
+
+\section{Systemübersicht}
+\input{system_overview}
+
+\section{Hardware}
+\input{hardware}
+
+\section{openHAB}
+\input{openhab}
+
+\section{Personen Erkennung}
+\input{person_recognition}
+
+\section{Benutzer Profile}
+\input{user_profiles}
+
+\section{Aussicht}
+\input{future_works}
+
+\bibliographystyle{lnig}
+\bibliography{lniguide}
+
+\end{document}
+
+
+
