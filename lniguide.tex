@@ -12,19 +12,21 @@
 \usepackage[figurename=Abb., tablename=Tab., small]{caption}[2015/04/20]
 \renewcommand{\lstlistingname}{List.}    % Listingname heit nun List. 
 
-%Beginn der Seitenzhlung fr diesen Beitrag
-\setcounter{page}{11}
+%Beginn der Seitenzhlung für diesen Beitrag
+\setcounter{page}{1}
 
 %Kopfzeileneinstellungen
 \pagestyle{fancy}
 \fancyhead{} % Lscht alle Kopfzeileneinstellungen
-\fancyhead[RO]{\small $<$Vorname Nachname [et. al.]$>$(Hrsg.): $<$Buchtitel$>$, \linebreak Lecture Notes in Informatics (LNI), Gesellschaft fr Informatik, Bonn $<$Jahr$>$ \hspace{5pt} \thepage \hspace{0.05cm}}
+% TODO: Erste Kopfzeile
+% \fancyhead[RO]{\small $<$Vorname Nachname [et. al.]$>$(Hrsg.): $<$Buchtitel$>$, \linebreak Lecture Notes in Informatics (LNI), Gesellschaft fr Informatik, Bonn $<$Jahr$>$ \hspace{5pt} \thepage \hspace{0.05cm}}
 \fancyfoot{} % Lscht alle Fuzeileneinstellungen
 \renewcommand{\headrulewidth}{0.4pt} %Linie unter Kopfzeile 
 \setcounter{footnote}{0}
 
-\author{Vorname1 Nachname1\footnote{Einrichtung/Universitt, Abteilung, Anschrift, Postleitzahl Ort, emailadresse@author1} \, Vorname2 Nachname2\footnote{Einrichtung/Universitt, Abteilung, Anschrift, Postleitzahl Ort, emailadresse@author2} \ und weitere Autorinnen und Autoren in der gleichen Notation}
-\title{Der Titel des Beitrags, der auch etwas länger sein und über zwei Zeilen reichen kann}
+\author{Roland Dudko\footnote{FH-Bielefeld, Informatik, 32427 Minden, roland.dudko@fh-bielefeld.de} \,
+        Marvin Lutz\footnote{FH-Bielefeld, Informatik, 32427 Minden, marvin.lutz@fh-bielefeld.de} \ }
+\title{Steuerung von IoT Komponenten über openHAB mit personalisierten Profilen - Implementiert auf dem TinkerForge RED Brick}
 \begin{document}
 
 \maketitle
@@ -36,7 +38,7 @@
 \input{abstract}
 \end{abstract}
 \begin{keywords}
-LNI Guidelines, \LaTeX Vorlage. Die Formatierung erfolgt automatisch innerhalb des keywords-Bereichs.
+smart home --- person recognition --- human interaction --- openHAB --- TinkerForge
 \end{keywords}
 
 \section{Einleitung}
@@ -45,7 +47,7 @@ LNI Guidelines, \LaTeX Vorlage. Die Formatierung erfolgt automatisch innerhalb d
 %Kopfzeileneinstellungen ab Seite 2
 \pagestyle{fancy}
 \fancyhead{} % Lscht alle Kopfzeileneinstellungen
-\fancyhead[RO]{\small Der Kurztitel des Beitrags \hspace{5pt} \thepage \hspace{0.05cm}}
+\fancyhead[RO]{\small IoT mit openHAB und Tinkerforge \hspace{5pt} \thepage \hspace{0.05cm}}
 \fancyhead[LE]{\hspace{0.05cm}\small \thepage \hspace{5pt} Vorname1 Nachname1 und Vorname2 Nachname2}
 \fancyfoot{} % Lscht alle Fuzeileneinstellungen
 \renewcommand{\headrulewidth}{0.4pt} %Linie unter Kopfzeile 
